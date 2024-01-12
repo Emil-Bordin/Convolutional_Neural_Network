@@ -1,8 +1,8 @@
 import pytorch_lightning as pl
 from pytorch_lightning import loggers as pl_loggers
 from pytorch_lightning.callbacks import EarlyStopping
-from EmilBordin969367_CNN import CNNClassification
-from EmilBordin969367_Data import DataLoading
+from CNN_Architecture import CNNClassification
+from Data_Loading import DataLoading
 
 
 #Exercise 6: Training and Evaluation
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     trainer.fit(model, train_dataloaders= train_loader, val_dataloaders=val_loader)
     trainer.test(ckpt_path="best", dataloaders=test_loader)
 
-#Exercise 7: Results
+#EResults
 #Training accuracy: 0.9988
 #Test accuracy: 1.0
 
